@@ -1,0 +1,18 @@
+{
+  "name": "redirectr",
+  "author": "Noam Ross",
+  "description": "Redirects r-bloggers links to their source pages",
+
+  "manifest_version": 2,
+  "version": "1.0",
+  "permissions": [
+    "https://www.r-bloggers.com/*"
+    ],
+  "content_scripts": [
+  {
+    "matches": ["https://www.r-bloggers.com/*/"],
+    "js": ["redirectr.js"],
+    "run_at": "document_idle"
+  }
+  ]
+}
